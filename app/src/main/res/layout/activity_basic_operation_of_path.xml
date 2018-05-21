@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".view.basic_operation_of_Path.BasicOperationOfPathActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/basic_operation_of_Path"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Path基础操作"/>
+
+		<Button
+			android:id="@+id/addXx_arcTo_of_Path"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="addXxx、arcTo"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/isXX_set_offset_of_Path"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="isXX、set、offset"/>
+
+		<Button
+			android:id="@+id/addArc_arcTo_of_Path"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="addArc、arcTo"/>
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/isEmpty_isRect_isConvex_set_offset_of_Path"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="isEmpty、isRect、isConvex、set、offset"/>
+
+	<Button
+		android:id="@+id/path_application"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="path应用"/>
+
+	<com.example.lenovo.mpplication.view.basic_operation_of_Path.BasePathView
+		android:id="@+id/bpv"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+</LinearLayout>
