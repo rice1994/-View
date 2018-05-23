@@ -19,6 +19,7 @@ public class DrawBitmap extends BaseView {
 	public final static int DrawBitmap1 = 1;
 	public final static int DrawBitmap2 = 2;
 	public final static int DrawBitmap3 = 3;
+	public final static int DrawBitmapAndText = 4;
 
 	public DrawBitmap(Context context) {
 		super(context);
@@ -60,16 +61,88 @@ public class DrawBitmap extends BaseView {
 			case DrawBitmap3:
 				draw3(canvas);
 				break;
+			case DrawBitmapAndText:
+				DrawBitmapAndText(canvas);
+
+				break;
 		}
 	}
 
+	/**
+	 * 水印
+	 */
+	private void DrawBitmapAndText(Canvas canvas) {
+		//画布
+		int w = mBitmap.getWidth();
+		int h = mBitmap.getHeight();
+		Bitmap bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+		Canvas canvas1 = new Canvas(bmp);
+		Paint paint = new Paint();
+		paint.setTextSize(30);
+		paint.setAntiAlias(true);
+		canvas1.drawBitmap(mBitmap, 0, 0, paint);
+
+		String text = "张三 2018/05/22 19:52 16:22";
+//		Rect bounds = new Rect();
+//		paint.getTextBounds(text, 0, text.length(), bounds);
+
+		canvas1.drawText(text, 24, h-24, paint);
+//		canvas1.drawText(text, 24, h-(bounds.bottom-bounds.top), paint);
+		canvas1.save();
+		canvas1.restore();
+
+//		canvas.translate(mWidth,mHeight);
+//		canvas.scale(-1,-1);
+		canvas.drawBitmap(bmp, 10, 10, new Paint());
+	}
+
+	//图片上绘制文字
+	private static Bitmap drawTextToBitmap(Context context, Bitmap bitmap, String text,
+			Paint paint, Rect bounds, int paddingLeft, int paddingTop) {
+		android.graphics.Bitmap.Config bitmapConfig = bitmap.getConfig();
+
+		paint.setDither(true); // 获取跟清晰的图像采样
+		paint.setFilterBitmap(true);// 过滤一些
+		if (bitmapConfig == null) {
+			bitmapConfig = android.graphics.Bitmap.Config.ARGB_8888;
+		}
+		bitmap = bitmap.copy(bitmapConfig, true);
+		Canvas canvas = new Canvas(bitmap);
+
+		canvas.drawText(text, paddingLeft, paddingTop, paint);
+		return bitmap;
+	}
+	/**
+	 * 绘制文字到左下方
+	 * @param context
+	 * @param bitmap
+	 * @param text
+	 * @param size
+	 * @param color
+	 * @param paddingLeft
+	 * @param paddingBottom
+	 * @return
+	 */
+//	public static Bitmap drawTextToLeftBottom(Context context, Bitmap bitmap, String text,
+//			int size, int color, int paddingLeft, int paddingBottom) {
+//		Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+//		paint.setColor(color);
+//		paint.setTextSize(dp2px(context, size));
+//		Rect bounds = new Rect();
+//		paint.getTextBounds(text, 0, text.length(), bounds);
+//		return drawTextToBitmap(context, bitmap, text, paint, bounds,
+//				dp2px(context, paddingLeft),
+//				bitmap.getHeight() - dp2px(context, paddingBottom));
+//	}
 	/**
 	 * 第一种
 	 * public void drawBitmap (Bitmap bitmap, Matrix matrix, Paint paint)
 	 * 关于Matrix和Paint暂时略过吧，一展开又是啰啰嗦嗦一大段
 	 */
 	private void draw1(Canvas canvas) {
+
 		canvas.drawBitmap(mBitmap, new Matrix(), new Paint());
+
 	}
 
 	/**

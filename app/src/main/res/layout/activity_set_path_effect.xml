@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical"
-	tools:context="com.example.lenovo.mpplication.view.canvas_image_text.CanvasImageTextActivity">
+	android:orientation="vertical">
 
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -13,22 +11,16 @@
 		android:orientation="horizontal">
 
 		<Button
-			android:id="@+id/DrawBitmap1"
+			android:id="@+id/basic_operation_of_Path"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="DrawBitmap1"/>
+			android:text="不设置效果"/>
 
 		<Button
-			android:id="@+id/DrawBitmap2"
+			android:id="@+id/CornerPathEffect"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="DrawBitmap2"/>
-
-		<Button
-			android:id="@+id/DrawBitmap3"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="DrawBitmap3"/>
+			android:text="CornerPathEffect"/>
 	</LinearLayout>
 
 	<LinearLayout
@@ -37,38 +29,44 @@
 		android:orientation="horizontal">
 
 		<Button
-			android:id="@+id/DrawText1"
+			android:id="@+id/DiscretePathEffect"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="DrawText1"/>
+			android:text="DiscretePathEffect"/>
 
 		<Button
-			android:id="@+id/DrawText2"
+			android:id="@+id/DashPathEffect"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="DrawText2"/>
+			android:text="DashPathEffect"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
 
 		<Button
-			android:id="@+id/DrawText3"
+			android:id="@+id/PathDashPathEffect"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="DrawText3"/>
+			android:text="PathDashPathEffect"
+			android:textSize="12sp"/>
+
+		<Button
+			android:id="@+id/ComposePathEffect"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="ComposePathEffect"/>
 	</LinearLayout>
 
 	<Button
-		android:id="@+id/DrawBitmapAndText"
+		android:id="@+id/SumPathEffect"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="DrawBitmapAndText"/>
-
-	<com.example.lenovo.mpplication.view.canvas_image_text.DrawBitmap
-		android:id="@+id/db"
+		android:text="SumPathEffect"/>
+	<com.example.lenovo.mpplication.view.setPathEffect.SetPathEffectView
+		android:id="@+id/view"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"/>
-
-	<com.example.lenovo.mpplication.view.canvas_image_text.DrawTextView
-		android:id="@+id/dt"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@color/colorAccent"/>
 </LinearLayout>

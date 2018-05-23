@@ -24,7 +24,8 @@ public class CanvasImageTextActivity extends Activity {
 		ButterKnife.bind(this);
 	}
 
-	@OnClick({R.id.DrawBitmap1, R.id.DrawBitmap2, R.id.DrawBitmap3, R.id.DrawText1, R.id.DrawText2, R.id.DrawText3})
+	@OnClick({R.id.DrawBitmap1, R.id.DrawBitmap2, R.id.DrawBitmap3, R.id.DrawText1,
+			R.id.DrawText2, R.id.DrawText3, R.id.DrawBitmapAndText})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.DrawBitmap1:
@@ -56,6 +57,11 @@ public class CanvasImageTextActivity extends Activity {
 				mDt.resetView(DrawTextView.DrawText3);
 				mDt.setVisibility(View.VISIBLE);
 				mDb.setVisibility(View.GONE);
+				break;
+			case R.id.DrawBitmapAndText:
+				mDb.resetView(DrawBitmap.DrawBitmapAndText);
+				mDb.setVisibility(View.VISIBLE);
+				mDt.setVisibility(View.GONE);
 				break;
 		}
 	}

@@ -1,9 +1,7 @@
 package com.example.lenovo.mpplication.view.basic_operation_of_Path;
 
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Path;
-import android.graphics.RectF;
+import android.graphics.*;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -19,8 +17,8 @@ public class BasePathView extends BaseView {
 	public final static int addXx_arcTo_of_Path = 2;
 	public final static int isXX_set_offset_of_Path = 3;
 	public final static int addArc_arcTo_of_Path = 4;
-	public final static int isEmpty_isRect_isConvex_set_offset_of_Path=5;
-	public final static int path_application=6;
+	public final static int isEmpty_isRect_isConvex_set_offset_of_Path = 5;
+	public final static int path_application = 6;
 
 	public BasePathView(Context context, @Nullable AttributeSet attrs) {
 		super(context, attrs);
@@ -47,10 +45,95 @@ public class BasePathView extends BaseView {
 			case addArc_arcTo_of_Path:
 				addArc_arcTo_of_Path(canvas);
 				break;
-				case isEmpty_isRect_isConvex_set_offset_of_Path:
-					isEmpty_isRect_isConvex_set_offset_of_Path(canvas);
+			case isEmpty_isRect_isConvex_set_offset_of_Path:
+				isEmpty_isRect_isConvex_set_offset_of_Path(canvas);
+				break;	case path_application:
+				path_application(canvas);
 				break;
 		}
+	}
+
+	/**
+	 * 雷达图
+	 */
+	private void path_application(Canvas canvas) {
+		 int count = 6;                //数据个数
+		 float angle = (float) (Math.PI*2/count);
+		 float radius = 400;                   //网格最大半径
+		 int centerX=mWidth/2;                  //中心X
+		 int centerY=mHeight/2;                  //中心Y
+		 String[] titles = {"a","b","c","d","e","f"};
+		 double[] data = {100,60,60,60,100,50,10,20}; //各维度分值
+		 float maxValue = 100;             //数据最大值
+		 Paint mainPaint;                //雷达区画笔
+		 Paint valuePaint;               //数据区画笔
+		 Paint textPaint;                //文本画笔
+
+		mainPaint = new Paint();
+		mainPaint.setColor(Color.GRAY);
+		mainPaint.setStyle(Paint.Style.STROKE);
+		Path path = new Path();
+		path.addCircle(0,0,1, Path.Direction.CW);
+		PathDashPathEffect pathDashPathEffect = new PathDashPathEffect(path, 10, 0, PathDashPathEffect.Style.ROTATE);
+		mainPaint.setPathEffect(pathDashPathEffect);
+
+
+
+		canvas.translate(centerX,centerY);
+		canvas.drawLine(0,0,radius,0,mainPaint);
+
+		Path path1 = new Path();
+
+		//雷区-绘制正多边形
+		for(int i=1;i<count;i++){
+			path1.reset();
+			for (int j=0;j<count;j++){
+				float x = (float) (radius/(count-1) * i * Math.cos(angle * j));
+				float y = (float) (radius/(count-1) * i * Math.sin(angle * j));
+				if(j==0) {
+					path1.moveTo(x,y);
+				}else {
+					path1.lineTo(x,y);
+				}
+			}
+			path1.close();
+			canvas.drawPath(path1,mainPaint);
+		}
+		//雷区-绘制直线
+		path1.reset();
+		for(int i=0;i<count;i++){
+			float x = (float) (radius*Math.cos(angle*i));
+			float y = (float) (radius*Math.sin(angle*i));
+			path1.lineTo(x,y);
+			canvas.drawPath(path1,mainPaint);
+			//绘制文字
+			textPaint = new Paint();
+			textPaint.setColor(Color.BLACK);
+			textPaint.setStrokeWidth(4);
+			textPaint.setTextSize(25);
+			canvas.drawText(titles[i],(float) (x*1.1),(float) (y*1.1),textPaint);
+		}
+
+		//绘制覆盖区域
+		valuePaint = new Paint();
+		path1.reset();
+		for(int i=0;i<count;i++) {
+			valuePaint.setAlpha(255);
+			valuePaint.setStyle(Paint.Style.FILL);
+			valuePaint.setColor(Color.BLUE);
+			float x = (float) (radius*Math.cos(angle*i));
+			float y = (float) (radius*Math.sin(angle*i));
+			float startX = (float) (x * data[i] / maxValue);
+			float startY = (float) (y * data[i] / maxValue);
+			if(i==0) {
+				path1.moveTo(startX,startY);
+			}else {
+				path1.lineTo(startX,startY);
+			}
+			canvas.drawCircle(startX,startY,10,valuePaint);
+		}
+		valuePaint.setAlpha(127);
+		canvas.drawPath(path1, valuePaint);
 	}
 
 	/**
@@ -70,36 +153,36 @@ public class BasePathView extends BaseView {
 	 */
 	private void isEmpty_isRect_isConvex_set_offset_of_Path(Canvas canvas) {
 		Path path = new Path();
-		Log.e("1",path.isEmpty()+"");
+		Log.e("1", path.isEmpty() + "");
 
-		path.lineTo(100,100);
-		Log.e("2",path.isEmpty()+"");
+		path.lineTo(100, 100);
+		Log.e("2", path.isEmpty() + "");
 
-		path.lineTo(0,400);
-		path.lineTo(400,400);
-		path.lineTo(400,0);
-		path.lineTo(0,0);
+		path.lineTo(0, 400);
+		path.lineTo(400, 400);
+		path.lineTo(400, 0);
+		path.lineTo(0, 0);
 
 		RectF rect = new RectF();
 		boolean b = path.isRect(rect);
-		Log.e("Rect","isRect:"+b+"| left:"+rect.left+"| top:"+rect.top+"| right:"+rect.right+"| bottom:"+rect.bottom);
+		Log.e("Rect", "isRect:" + b + "| left:" + rect.left + "| top:" + rect.top + "| right:" + rect.right + "| bottom:" + rect.bottom);
 
 		canvas.translate(mWidth / 2, mHeight / 2);  // 移动坐标系到屏幕中心
-		canvas.scale(1,-1);                         // <-- 注意 翻转y坐标轴
+		canvas.scale(1, -1);                         // <-- 注意 翻转y坐标轴
 
 		path = new Path();                     // path添加一个矩形
-		path.addRect(-200,-200,200,200, Path.Direction.CW);
+		path.addRect(-200, -200, 200, 200, Path.Direction.CW);
 
 		Path src = new Path();                      // src添加一个圆
-		src.addCircle(0,0,100, Path.Direction.CW);
+		src.addCircle(0, 0, 100, Path.Direction.CW);
 
 		path.set(src);                              // 大致相当于 path = src;
 
-		canvas.drawPath(path,mStrokeRedPaint);
+		canvas.drawPath(path, mStrokeRedPaint);
 
-		path.offset(300,0);
+		path.offset(300, 0);
 
-		canvas.drawPath(path,mStrokeBluePaint);
+		canvas.drawPath(path, mStrokeBluePaint);
 	}
 
 	/**
@@ -109,38 +192,38 @@ public class BasePathView extends BaseView {
 	 * // arcTo
 	 * public void arcTo (RectF oval, float startAngle, float sweepAngle)
 	 * public void arcTo (RectF oval, float startAngle, float sweepAngle, boolean forceMoveTo)
-	 *
+	 * <p>
 	 * 参数	                  摘要
 	 * oval                   圆弧的外切矩形。
 	 * startAngle             开始角度
 	 * sweepAngle             扫过角度(-360 <= sweepAngle <360)
 	 * forceMoveTo            是否强制使用MoveTo,也就是说，是否使用moveTo将变量移动到圆弧的起点位移,也就意味着：
-	 *
+	 * <p>
 	 * true	    将最后一个点移动到圆弧起点，即不连接最后一个点与圆弧起点	public void addArc (RectF oval, float startAngle, float sweepAngle)
 	 * false	不移动，而是连接最后一个点与圆弧起点	public void arcTo (RectF oval, float startAngle, float sweepAngle)
-	 *
+	 * <p>
 	 * PS: sweepAngle取值范围是 [-360, 360)，不包括360，当 >= 360 或者 < -360 时将不会绘制任何内容， 对于360，你可以用一个接近的值替代，例如: 359.99。
-	 *
+	 * <p>
 	 * 名称	    作用	            区别
 	 * addArc	添加一个圆弧到path	直接添加一个圆弧到path中
 	 * arcTo	添加一个圆弧到path	添加一个圆弧到path，如果圆弧的起点和上次最后一个坐标点不相同，就连接两个点
 	 */
 	private void addArc_arcTo_of_Path(Canvas canvas) {
-		canvas.translate(mWidth/2,300);
-		canvas.scale(1,-1);
+		canvas.translate(mWidth / 2, 300);
+		canvas.scale(1, -1);
 		Path path = new Path();
-		path.lineTo(100,100);
+		path.lineTo(100, 100);
 		RectF rectF = new RectF(0, 0, 300, 300);
-		path.addArc(rectF,0,270);
+		path.addArc(rectF, 0, 270);
 //		path.arcTo(rectF,0,270,true);
-		canvas.drawPath(path,mStrokeBluePaint);
+		canvas.drawPath(path, mStrokeBluePaint);
 
-		canvas.translate(0,-300);
-		path =  new Path();
-		path.lineTo(100,100);
-		path.arcTo(rectF,0,270);
+		canvas.translate(0, -300);
+		path = new Path();
+		path.lineTo(100, 100);
+		path.arcTo(rectF, 0, 270);
 //		path.arcTo(rectF,0,270,false);
-		canvas.drawPath(path,mStrokeRedPaint);
+		canvas.drawPath(path, mStrokeRedPaint);
 
 
 	}

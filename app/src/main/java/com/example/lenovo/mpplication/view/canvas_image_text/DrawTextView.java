@@ -61,7 +61,15 @@ public class DrawTextView extends BaseView {
 				onDrawText3(canvas);
 
 				break;
+
 		}
+	}
+
+	/**
+	 * 水印
+	 */
+	private void DrawBitmapAndText(Canvas canvas) {
+		Canvas canvas1 = new Canvas();
 	}
 
 	/**

@@ -53,7 +53,7 @@
 		android:id="@+id/path_application"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="path应用"/>
+		android:text="path应用-雷达图"/>
 
 	<com.example.lenovo.mpplication.view.basic_operation_of_Path.BasePathView
 		android:id="@+id/bpv"
