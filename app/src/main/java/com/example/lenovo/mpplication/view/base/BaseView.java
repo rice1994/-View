@@ -3,6 +3,7 @@ package com.example.lenovo.mpplication.view.base;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.view.View;
  */
 public class BaseView extends View {
 
+	public Path mPath;
+	public Paint mStrokeGrayPaint;
 	public Paint mStrokeYellowPaint;
 	public Paint mStrokeGreenPaint;
 	public Paint mStrokeRedPaint;
@@ -28,6 +31,7 @@ public class BaseView extends View {
 
 	public BaseView(Context context, @Nullable AttributeSet attrs) {
 		super(context, attrs);
+		mPath = new Path();
 		mBlackPaint = new Paint();
 		mBlackPaint.setColor(Color.BLACK);
 		mBlackPaint.setStrokeWidth(5);
@@ -49,6 +53,10 @@ public class BaseView extends View {
 		mStrokeGreenPaint.setColor(Color.GREEN);
 		mStrokeGreenPaint.setStyle(Paint.Style.STROKE);    // 填充模式 - 描边
 		mStrokeGreenPaint.setStrokeWidth(10);              // 边框宽度 - 10
+		mStrokeGrayPaint = new Paint();             // 创建画笔
+		mStrokeGrayPaint.setColor(Color.GRAY);
+		mStrokeGrayPaint.setStyle(Paint.Style.STROKE);    // 填充模式 - 描边
+		mStrokeGrayPaint.setStrokeWidth(10);              // 边框宽度 - 10
 	}
 
 	public BaseView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {

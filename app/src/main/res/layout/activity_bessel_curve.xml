@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".view.bessel_curve.BesselCurveActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/curve1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="二阶曲线"/>
+
+		<Button
+			android:id="@+id/curve2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="二阶曲线"/>
+
+		<Button
+			android:id="@+id/curve3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="三阶曲线"/>
+
+		<Button
+			android:id="@+id/curve_demo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="实例"/>
+	</LinearLayout>
+	<RadioGroup
+		android:id="@+id/rg"
+		android:layout_width="match_parent"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:padding="5dp"
+		android:orientation="horizontal"
+		android:layout_height="wrap_content">
+		<RadioButton
+			android:id="@+id/control1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="100dp"
+			android:checked="true"
+			android:text="控制点1"/>
+
+		<RadioButton
+			android:id="@+id/control2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="控制点2"/>
+	</RadioGroup>
+	<com.example.lenovo.mpplication.view.bessel_curve.BesselCurveView
+		android:id="@+id/view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone"/>
+
+	<com.example.lenovo.mpplication.view.bessel_curve.Bezier3
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -25,6 +25,12 @@
 		android:layout_height="wrap_content"
 		android:text="路径效果setPathEffect"/>
 
+	<Button
+		android:id="@+id/bessel_curve"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Path之贝塞尔曲线"/>
+
 	<com.example.lenovo.mpplication.view.CheckView
 		android:id="@+id/cv"
 		android:layout_width="match_parent"

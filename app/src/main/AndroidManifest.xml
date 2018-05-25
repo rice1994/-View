@@ -25,7 +25,8 @@
 		<activity android:name=".okhttp.Main2Activity"/>
 		<activity android:name=".view.canvas_image_text.CanvasImageTextActivity"/>
 		<activity android:name=".view.basic_operation_of_Path.BasicOperationOfPathActivity"/>
-		<activity android:name=".view.setPathEffect.SetPathEffectActivity"></activity>
+		<activity android:name=".view.setPathEffect.SetPathEffectActivity"/>
+		<activity android:name=".view.bessel_curve.BesselCurveActivity"></activity>
 	</application>
 
 </manifest>
