@@ -15,6 +15,8 @@ public class BesselCurveActivity extends Activity {
 	BesselCurveView mView;
 	@BindView(R.id.rg)
 	RadioGroup mRg;
+	@BindView(R.id.demo)
+	Bezier3 mDemo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,13 @@ public class BesselCurveActivity extends Activity {
 	@OnClick({R.id.curve1, R.id.curve2, R.id.curve3, R.id.curve_demo})
 	public void onClick(View view) {
 		mRg.setVisibility(view.getId() == R.id.curve3 ? View.VISIBLE : View.GONE);
+		if (view.getId() == R.id.curve_demo) {
+			mView.setVisibility(View.GONE);
+			mDemo.setVisibility(View.VISIBLE);
+		}else {
+			mView.setVisibility(View.VISIBLE);
+			mDemo.setVisibility(View.GONE);
+		}
 		switch (view.getId()) {
 			case R.id.curve1:
 				mView.resetView(BesselCurveView.curve1);
@@ -45,9 +54,6 @@ public class BesselCurveActivity extends Activity {
 				break;
 			case R.id.curve3:
 				mView.resetView(BesselCurveView.control1);
-				break;
-			case R.id.curve_demo:
-				mView.resetView(BesselCurveView.curve_demo);
 				break;
 		}
 	}
