@@ -37,7 +37,12 @@ public class BesselCurveActivity extends Activity {
 
 	@OnClick({R.id.curve1, R.id.curve2, R.id.curve3, R.id.curve_demo})
 	public void onClick(View view) {
-		mRg.setVisibility(view.getId() == R.id.curve3 ? View.VISIBLE : View.GONE);
+		if(view.getId() == R.id.curve3 ){
+			mRg.setVisibility(View.VISIBLE);
+			mRg.invalidate();
+		}else {
+			mRg.setVisibility(View.GONE);
+		}
 		if (view.getId() == R.id.curve_demo) {
 			mView.setVisibility(View.GONE);
 			mDemo.setVisibility(View.VISIBLE);

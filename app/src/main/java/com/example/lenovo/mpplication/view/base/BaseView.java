@@ -21,6 +21,7 @@ public class BaseView extends View {
 	public Paint mStrokeRedPaint;
 	public Paint mStrokeBluePaint;
 	public Paint mBlackPaint;
+	public Paint mBluePaint;
 	public int mType;
 	public int mWidth;
 	public int mHeight;
@@ -36,7 +37,15 @@ public class BaseView extends View {
 		mBlackPaint.setColor(Color.BLACK);
 		mBlackPaint.setStrokeWidth(5);
 		mBlackPaint.setStyle(Paint.Style.FILL);
+		mBlackPaint.setStyle(Paint.Style.FILL);
 		mBlackPaint.setTextSize(50);              // 设置字体大小
+
+		mBluePaint = new Paint();
+		mBluePaint.setTextSize(50);
+		mBluePaint.setColor(Color.BLUE);
+		mBluePaint.setStrokeWidth(5);
+		mBluePaint.setStyle(Paint.Style.FILL);
+		mBluePaint.setTextSize(50);              // 设置字体大小
 		mStrokeBluePaint = new Paint();             // 创建画笔
 		mStrokeBluePaint.setColor(Color.BLUE);           // 画笔颜色 - 蓝色
 		mStrokeBluePaint.setStyle(Paint.Style.STROKE);    // 填充模式 - 描边
