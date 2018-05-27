@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".view3.Canvas3Activity">
+
+	<TableLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TableRow>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="DrawBitmap:" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="DrawPicture:" />
+		</TableRow>
+
+		<TableRow>
+
+
+			<Button
+				android:id="@+id/drawPicture1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="使用Picture提供的draw方法绘制。"
+				android:textAllCaps="false" />
+
+			<Button
+				android:id="@+id/matrix"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Matrix"
+				android:textAllCaps="false" />
+		</TableRow>
+
+		<TableRow>
+
+			<Button
+				android:id="@+id/drawPicture2"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:text="	使用Canvas提供的drawPicture方法绘制"
+				android:textAllCaps="false" />
+
+			<Button
+				android:id="@+id/position"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="position"
+				android:textAllCaps="false" />
+		</TableRow>
+
+		<TableRow>
+
+			<Button
+				android:id="@+id/drawPicture3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="使用PictureDrawable的draw方法绘制。"
+				android:textAllCaps="false" />
+
+			<Button
+				android:id="@+id/rect"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Rect"
+				android:textAllCaps="false" />
+		</TableRow>
+
+	</TableLayout>
+
+	<com.example.administrator.myview.view3.DrawPicture
+		android:id="@+id/drawPicture"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone" />
+
+	<com.example.administrator.myview.view3.DrawBitmap
+		android:id="@+id/drawBitmap"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone" />
+</LinearLayout>

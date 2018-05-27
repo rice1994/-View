@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/drawPoint"
+			android:layout_width="45dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="点" />
+
+		<Button
+			android:id="@+id/drawLine"
+			android:layout_width="65dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="直线" />
+
+		<Button
+			android:id="@+id/drawRect"
+			android:layout_width="65dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="矩形" />
+
+		<Button
+			android:id="@+id/drawRoundRect"
+			android:layout_width="80dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="圆角矩形" />
+
+		<Button
+			android:id="@+id/drawOval"
+			android:layout_width="65dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="椭圆" />
+
+		<Button
+			android:id="@+id/drawCircle"
+			android:layout_width="40dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="圆" />
+	</LinearLayout>
+	>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+
+		<Button
+			android:id="@+id/center_oval_arc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="中点椭圆圆弧" />
+
+		<Button
+			android:id="@+id/oval_arc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="非中点椭圆圆弧" />
+
+		<Button
+			android:id="@+id/center_circle_arc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="中点正圆圆弧" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/circle_arc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="非中点正圆圆弧" />
+
+		<Button
+			android:id="@+id/style"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="绘制效果" />
+
+		<Button
+			android:id="@+id/tu"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="画饼图" />
+	</LinearLayout>
+
+	<com.example.lenovo.mpplication.view.view1.BaseView
+		android:id="@+id/baseView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+</LinearLayout>

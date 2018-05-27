@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".view.path_finish.PathFinishActivity">
+
+	<TableLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TableRow>
+
+			<Button
+				android:id="@+id/Xxx"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="rXxx方法" />
+
+			<Button
+				android:id="@+id/rXxx"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="rXxx方法" />
+
+			<Button
+				android:id="@+id/EVEN_ODD"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="奇偶规则" />
+		</TableRow>
+
+		<TableRow>
+
+			<Button
+				android:id="@+id/INVERSE_EVEN_ODD"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="反奇偶规则" />
+
+			<Button
+				android:id="@+id/WINDING"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="非零环绕数规则" />
+
+			<Button
+				android:id="@+id/INVERSE_WINDING"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="反非零环绕数规则" />
+		</TableRow>
+
+		<TableRow>
+
+			<Button
+				android:id="@+id/op_demo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="布尔操作实例" />
+
+			<Button
+				android:id="@+id/op"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="布尔操作" />
+
+			<Button
+				android:id="@+id/bounds"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="计算边界" />
+		</TableRow>
+	</TableLayout>
+
+<com.example.lenovo.mpplication.view.path_finish.PathFinishView
+	android:id="@+id/view"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" />
+</LinearLayout>
