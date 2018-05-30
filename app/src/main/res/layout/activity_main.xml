@@ -12,49 +12,60 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:text="Canvas之绘制图形" />
+		android:text="Canvas之绘制图形"/>
 
 	<Button
 		android:id="@+id/canvas_draw_2"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:text="Canvas之画布操作" />
+		android:text="Canvas之画布操作"/>
 
 	<Button
 		android:id="@+id/canvas_image_text"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Canvas之图片文字" />
+		android:text="Canvas之图片文字"/>
 
 	<Button
 		android:id="@+id/basic_operation_of_Path"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Path之基本操作" />
+		android:text="Path之基本操作"/>
 
 	<Button
 		android:id="@+id/setPathEffect"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="路径效果setPathEffect" />
+		android:text="路径效果setPathEffect"/>
 
 	<Button
 		android:id="@+id/bessel_curve"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Path之贝塞尔曲线" />
+		android:text="Path之贝塞尔曲线"/>
 
 	<Button
 		android:id="@+id/path_finish"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Path之完结篇" />
+		android:text="Path之完结篇"/>
+
+	<Button
+		android:id="@+id/PathMeasure"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="PathMeasure"/>
+	<Button
+		android:id="@+id/Matrix"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Matrix原理"/>
 
 	<com.example.lenovo.mpplication.view.CheckView
 		android:id="@+id/cv"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:visibility="gone" />
+		android:visibility="gone"/>
 
 </LinearLayout>

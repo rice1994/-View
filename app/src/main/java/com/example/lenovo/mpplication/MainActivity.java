@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+import com.example.lenovo.mpplication.view.Matrix.MatrixActivity;
+import com.example.lenovo.mpplication.view.PathMeasure.PathMeasureActivity;
 import com.example.lenovo.mpplication.view.basic_operation_of_Path.BasicOperationOfPathActivity;
 import com.example.lenovo.mpplication.view.bessel_curve.BesselCurveActivity;
 import com.example.lenovo.mpplication.view.canvas_image_text.CanvasImageTextActivity;
@@ -33,7 +33,8 @@ public class MainActivity extends Activity {
 	}
 
 	@OnClick({R.id.canvas_draw_1, R.id.canvas_draw_2, R.id.canvas_image_text,
-			R.id.basic_operation_of_Path, R.id.setPathEffect, R.id.bessel_curve,R.id.path_finish})
+			R.id.basic_operation_of_Path, R.id.setPathEffect, R.id.bessel_curve,R.id.path_finish
+	,R.id.PathMeasure,R.id.Matrix})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.canvas_draw_1:
@@ -58,6 +59,10 @@ public class MainActivity extends Activity {
 				break;
 			case R.id.path_finish:
 				startActivity(new Intent(this, PathFinishActivity.class));
+				break;		case R.id.PathMeasure:
+				startActivity(new Intent(this, PathMeasureActivity.class));
+				break;case R.id.Matrix:
+				startActivity(new Intent(this, MatrixActivity.class));
 				break;
 		}
 	}

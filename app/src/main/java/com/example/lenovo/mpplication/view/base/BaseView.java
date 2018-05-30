@@ -76,8 +76,8 @@ public class BaseView extends View {
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
-		mWidth = w;
 		mHeight = h;
+		mWidth = w;
 	}
 
 	public void resetView(int type) {

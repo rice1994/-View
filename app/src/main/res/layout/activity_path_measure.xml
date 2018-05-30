@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".view.PathMeasure.PathMeasureActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/base"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="基本操作"/>
+
+		<Button
+			android:id="@+id/getPosTan"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="getPosTan"/>
+
+		<Button
+			android:id="@+id/getMatrix"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="getMatrix"/>
+	</LinearLayout>
+
+	<com.example.lenovo.mpplication.view.PathMeasure.PathMeasureView
+		android:id="@+id/vie"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+</LinearLayout>
