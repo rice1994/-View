@@ -82,27 +82,31 @@ public class BesselCurveView extends BaseView {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		switch (mType) {
-			case curve2:
-				control.x = event.getX();
-				control.y = event.getY();
-				invalidate();
-				return true;
-			case control1:
-			case control2:
-				if(mType == control1){
-					control_1.x = event.getX();
-					control_1.y = event.getY();
-				}else {
-					control_2.x = event.getX();
-					control_2.y = event.getY();
+		switch (event.getAction()){
+			case MotionEvent.ACTION_MOVE:
+				switch (mType) {
+					case curve2:
+						control.x = event.getX();
+						control.y = event.getY();
+						invalidate();
+						return true;
+					case control1:
+					case control2:
+						if(mType == control1){
+							control_1.x = event.getX();
+							control_1.y = event.getY();
+						}else {
+							control_2.x = event.getX();
+							control_2.y = event.getY();
+						}
+						invalidate();
+						return true;
+					case curve_demo:
+						break;
 				}
-				invalidate();
-				return true;
-			case curve_demo:
-				break;
 		}
-		return super.onTouchEvent(event);
+
+		return true;
 	}
 
 
