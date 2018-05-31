@@ -30,7 +30,8 @@
 		<activity android:name=".view.bessel_curve.BesselCurveActivity"/>
 		<activity android:name=".view.path_finish.PathFinishActivity"/>
 		<activity android:name=".view.PathMeasure.PathMeasureActivity"/>
-		<activity android:name=".view.Matrix.MatrixActivity"></activity>
+		<activity android:name=".view.Matrix.MatrixActivity"/>
+		<activity android:name=".view.Matrix_Analisis.MatrixAnalisisActivity"></activity>
 	</application>
 
 </manifest>

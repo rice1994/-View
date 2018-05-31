@@ -192,8 +192,8 @@ public class PathMeasureView extends BaseView {
 		pathMeasure.getPosTan((float) (pathMeasure.getLength() * currentValue), pos, tan);
 		mMatrix.reset();  // 重置Matrix
 		float degrees = (float) (Math.atan2(tan[1], tan[0]) * 180.0 / Math.PI); // 计算图片旋转角度
-		mMatrix.postRotate(degrees, mBitmap.getWidth() / 2, mBitmap.getHeight() / 2);   // 旋转图片
 		mMatrix.postTranslate(pos[0] - mBitmap.getWidth() / 2, pos[1] - mBitmap.getHeight() / 2);   // 将图片绘制中心调整到与当前点重合
+		mMatrix.postRotate(degrees, pos[0], pos[1]);   // 旋转图片
 		canvas.drawPath(mPath, mStrokeGrayPaint);
 		canvas.drawBitmap(mBitmap, mMatrix, mStrokeGrayPaint);
 		invalidate();
