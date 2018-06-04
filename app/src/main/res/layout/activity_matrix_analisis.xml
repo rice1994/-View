@@ -4,8 +4,24 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:orientation="vertical"
 	tools:context=".view.Matrix_Analisis.MatrixAnalisisActivity">
+<!--<com.example.lenovo.mpplication.view.Matrix_Analisis.SetPolyToPoly-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="match_parent"/>-->
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="1、mapPoints计算点\n 2、mapRadius判断圆\n 3、mapRect判断矩形\n 4、mapVectors与mapRect基本相同但它不受位移影响"/>
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="setPolyToPoly示例"/>
 
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="setRectToRect示例"/>
 	<com.example.lenovo.mpplication.view.Matrix_Analisis.MatrixAnalisisView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"/>
