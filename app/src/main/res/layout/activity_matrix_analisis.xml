@@ -9,20 +9,34 @@
 <!--<com.example.lenovo.mpplication.view.Matrix_Analisis.SetPolyToPoly-->
 	<!--android:layout_width="match_parent"-->
 	<!--android:layout_height="match_parent"/>-->
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="1、mapPoints计算点\n 2、mapRadius判断圆\n 3、mapRect判断矩形\n 4、mapVectors与mapRect基本相同但它不受位移影响"/>
+	<!--<TextView-->
+		<!--android:layout_width="wrap_content"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:text="1、mapPoints计算点\n 2、mapRadius判断圆\n 3、mapRect判断矩形\n 4、mapVectors与mapRect基本相同但它不受位移影响"/>-->
 	<Button
+		android:id="@+id/setPolyToPoly"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="setPolyToPoly示例"/>
 
 	<Button
+		android:id="@+id/setRectToRect"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="setRectToRect示例"/>
+
+	<!--<TextView-->
+		<!--android:layout_width="wrap_content"-->
+		<!--android:layout_height="wrap_content"-->
+		<!--android:text="rectStaysRect: 判断矩形经过变换后是否仍为矩形\nsetSinCos: 设置sinCos值，这个是控制Matrix旋转的，由于Matrix已经封装好了Rotate方法，所以这个并不常用"/>-->
+	<Button
+		android:id="@+id/Camera"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Camera"/>
 	<com.example.lenovo.mpplication.view.Matrix_Analisis.MatrixAnalisisView
+		android:id="@+id/view"
 		android:layout_width="match_parent"
+		android:layout_margin="20dp"
 		android:layout_height="match_parent"/>
 </LinearLayout>
