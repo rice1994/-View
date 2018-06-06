@@ -75,6 +75,7 @@ public class MatrixAnalisisView   extends BaseView  {
 
 		switch (mType) {
 			case setPolyToPoly:
+				setOnClickListener(null);
 				canvas.translate(100, 100);
 				canvas.drawBitmap(bitmap, matrix, new Paint());
 				for (int i = 0; i < testPoint * 2; i += 2) {

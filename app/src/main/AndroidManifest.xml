@@ -31,7 +31,8 @@
 		<activity android:name=".view.path_finish.PathFinishActivity"/>
 		<activity android:name=".view.PathMeasure.PathMeasureActivity"/>
 		<activity android:name=".view.Matrix.MatrixActivity"/>
-		<activity android:name=".view.Matrix_Analisis.MatrixAnalisisActivity"></activity>
+		<activity android:name=".view.Matrix_Analisis.MatrixAnalisisActivity"/>
+		<activity android:name=".view.event.EventViewActivity"></activity>
 	</application>
 
 </manifest>
