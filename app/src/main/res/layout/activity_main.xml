@@ -74,8 +74,19 @@
 		android:layout_height="wrap_content"
 		android:text="event"/>
 
+	<Button
+		android:id="@+id/special_control"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="特殊控件的事件处理方案"/>
+
+	<Button
+		android:id="@+id/GestureDetector_and_ScaleGestureDetector"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="GestureDetector和ScaleGestureDetector "/>
+
 	<com.example.lenovo.mpplication.view.CheckView
-		android:id="@+id/cv"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:visibility="gone"/>

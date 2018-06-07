@@ -39,6 +39,11 @@ public class EventView extends BaseView {
 	}
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent event) {
+		Log.i(TAG, "event --------------------");
+
+		Log.i(TAG, "event --getActionIndex----"+event.getActionIndex());
+		Log.i(TAG, "event --getPointerId("+event.getActionIndex()+")----"+event.getPointerId(event.getActionIndex()));
+
 		switch (event.getAction()) {
 			/** 手指 初次接触到屏幕 时触发。 */
 			case MotionEvent.ACTION_DOWN:
@@ -115,6 +120,8 @@ public class EventView extends BaseView {
 				if (haveSecondPoint) {
 					// 通过 pointerId 来获取 pointerIndex
 					int pointerIndex = event.findPointerIndex(1);
+					if(pointerIndex<0)
+						break;
 					// 通过 pointerIndex 来取出对应的坐标
 					point.set(event.getX(pointerIndex), event.getY(pointerIndex));
 				}
