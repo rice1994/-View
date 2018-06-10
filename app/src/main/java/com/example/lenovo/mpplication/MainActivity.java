@@ -18,6 +18,7 @@ import com.example.lenovo.mpplication.view.canvas_image_text.CanvasImageTextActi
 import com.example.lenovo.mpplication.view.event.EventViewActivity;
 import com.example.lenovo.mpplication.view.event.RemoteControlMenuActivity;
 import com.example.lenovo.mpplication.view.path_finish.PathFinishActivity;
+import com.example.lenovo.mpplication.view.image.ImageActivity;
 import com.example.lenovo.mpplication.view.setPathEffect.SetPathEffectActivity;
 import com.example.lenovo.mpplication.view.view1.CanvasActivity;
 import com.example.lenovo.mpplication.view.view2.Canvas2Activity;
@@ -39,7 +40,7 @@ public class MainActivity extends Activity {
 	@OnClick({R.id.canvas_draw_1, R.id.canvas_draw_2, R.id.canvas_image_text,
 			R.id.basic_operation_of_Path, R.id.setPathEffect, R.id.bessel_curve, R.id.path_finish
 			, R.id.PathMeasure, R.id.Matrix, R.id.Matrix_Analisis,R.id.event
-	,R.id.special_control,R.id.GestureDetector_and_ScaleGestureDetector})
+	,R.id.special_control,R.id.GestureDetector_and_ScaleGestureDetector, R.id.image})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.canvas_draw_1:
@@ -73,6 +74,8 @@ public class MainActivity extends Activity {
 				break;
 			case R.id.Matrix_Analisis:
 				startActivity(new Intent(this, MatrixAnalisisActivity.class));
+				break;		case R.id.image:
+				startActivity(new Intent(this, ImageActivity.class));
 				break;
 			case R.id.event:
 				startActivity(new Intent(this, EventViewActivity.class));
@@ -81,6 +84,9 @@ public class MainActivity extends Activity {
 				startActivity(new Intent(this, RemoteControlMenuActivity.class));
 				break;			case R.id.GestureDetector_and_ScaleGestureDetector:
 				startActivity(new Intent(this, DetectorActivity.class));
+				break;
+case R.id.image:
+				startActivity(new Intent(this, ImageActivity.class));
 				break;
 		}
 	}

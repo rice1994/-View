@@ -39,6 +39,7 @@ public class DrawBitmap extends BaseView {
 		Bitmap bitmap = null;
 		try {
 			InputStream is = getResources().getAssets().open("pg.png");
+
 			bitmap = BitmapFactory.decodeStream(is);
 			is.close();
 		} catch (IOException e) {
