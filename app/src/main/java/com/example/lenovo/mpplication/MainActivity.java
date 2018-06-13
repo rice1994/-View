@@ -39,8 +39,8 @@ public class MainActivity extends Activity {
 
 	@OnClick({R.id.canvas_draw_1, R.id.canvas_draw_2, R.id.canvas_image_text,
 			R.id.basic_operation_of_Path, R.id.setPathEffect, R.id.bessel_curve, R.id.path_finish
-			, R.id.PathMeasure, R.id.Matrix, R.id.Matrix_Analisis,R.id.event
-	,R.id.special_control,R.id.GestureDetector_and_ScaleGestureDetector, R.id.image})
+			, R.id.PathMeasure, R.id.Matrix, R.id.Matrix_Analisis, R.id.event
+			, R.id.special_control, R.id.GestureDetector_and_ScaleGestureDetector, R.id.image})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.canvas_draw_1:
@@ -74,18 +74,17 @@ public class MainActivity extends Activity {
 				break;
 			case R.id.Matrix_Analisis:
 				startActivity(new Intent(this, MatrixAnalisisActivity.class));
-				break;		case R.id.image:
-				startActivity(new Intent(this, ImageActivity.class));
 				break;
 			case R.id.event:
 				startActivity(new Intent(this, EventViewActivity.class));
 				break;
 			case R.id.special_control:
 				startActivity(new Intent(this, RemoteControlMenuActivity.class));
-				break;			case R.id.GestureDetector_and_ScaleGestureDetector:
+				break;
+			case R.id.GestureDetector_and_ScaleGestureDetector:
 				startActivity(new Intent(this, DetectorActivity.class));
 				break;
-case R.id.image:
+			case R.id.image:
 				startActivity(new Intent(this, ImageActivity.class));
 				break;
 		}
