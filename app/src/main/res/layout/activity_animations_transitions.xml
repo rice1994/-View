@@ -5,19 +5,26 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context="com.example.lenovo.mpplication.MainActivity">
+	tools:context=".AnimationsTransitionsActivity">
+<Button
+	android:id="@+id/valueAnimator"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="valueAnimator示例"/>
 	<Button
-		android:id="@+id/custom_view"
+		android:id="@+id/btn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:gravity="center"
-		android:text="自定义View系列"/>
-
+		android:text="按钮"/>
 	<Button
-		android:id="@+id/animations_transitions"
+		android:id="@+id/tween"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:gravity="center"
-		android:text="动画和过度"/>
+		android:text="补间动画"/>
 
+	<Button
+		android:id="@+id/property"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="属性动画"/>
 </LinearLayout>

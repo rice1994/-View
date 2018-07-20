@@ -108,8 +108,10 @@ public class DetectorView extends BaseView{
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		gestureDetector.onTouchEvent(event);
-		scaleGestureDetector.onTouchEvent(event);
-		return true;
+		if(gestureDetector.onTouchEvent(event))
+			return true;
+		if (scaleGestureDetector.onTouchEvent(event))
+			return true;
+		return super.onTouchEvent(event);
 	}
 }

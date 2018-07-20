@@ -13,7 +13,7 @@ import android.widget.ImageView;
  * Created by fan on 2018/5/29.
  * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
-public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGlobalLayoutListener, ScaleGestureDetector.OnScaleGestureListener, View.OnTouchListener {
+public class ZoomImageView extends android.support.v7.widget.AppCompatImageView implements ViewTreeObserver.OnGlobalLayoutListener, ScaleGestureDetector.OnScaleGestureListener, View.OnTouchListener {
 	private static final String TAG = "ZoomImageView";
 
 	/**
@@ -81,7 +81,7 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
 //                    mScaleMatrix.postScale(mMidScale / scale, mMidScale / scale,x,y);
 //                    checkBorderAndCenterWhenScale();
 //                    setImageMatrix(mScaleMatrix);
-					postDelayed(new AutoScaleRunnable(mMidScale,x,y),16);
+					postDelayed(new AutoScaleRunnable(mMidScale,x,y),66);
 					isAutoScale = true;
 				} else {
 //                    mScaleMatrix.postScale(mInitScale / scale, mInitScale / scale,x,y);
@@ -396,8 +396,6 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
 			default:
 				break;
 		}
-
-
 		return true;
 	}
 

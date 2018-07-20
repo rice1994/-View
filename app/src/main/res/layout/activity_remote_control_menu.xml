@@ -5,11 +5,11 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context=".view.event.RemoteControlMenuActivity">
-<!--<com.example.lenovo.mpplication.view.event.RemoteControlMenu1-->
-	<!--android:layout_marginTop="200dp"-->
-	<!--android:layout_width="match_parent"-->
-	<!--android:layout_height="match_parent"/>-->
-	<com.example.lenovo.mpplication.view.event.DragView
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"/>
+<com.example.lenovo.mpplication.view.event.RemoteControlMenu1
+	android:layout_marginTop="200dp"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"/>
+	<!--<com.example.lenovo.mpplication.view.event.DragView-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="match_parent"/>-->
 </android.support.constraint.ConstraintLayout>
