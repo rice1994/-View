@@ -42,6 +42,15 @@
 		<activity android:name=".CustomViewActivity"/>
 		<activity android:name=".AnimationsTransitionsActivity"/>
 		<activity android:name=".animation.tween.TweenActivity"/>
+		<activity android:name=".animation.PropertyActivity"/>
+		<activity android:name=".view.CardFlipActivity"/>
+		<activity android:name=".resource_types.ResourceTypesActivity"/>
+		<activity android:name=".view.ViewPagerActivity"/>
+		<activity android:name="com.npi.blureffect.BlurActivity"/>
+		<activity android:name=".drag.DrayAndDropActivity"/>
+		<activity android:name=".animation.tween.ZoomActivity"/>
+		<activity android:name=".animation.AnimateLayoutChangesActivity"/>
+		<activity android:name=".animation.TransitionFrameworkActivity"/>
 	</application>
 
 </manifest>

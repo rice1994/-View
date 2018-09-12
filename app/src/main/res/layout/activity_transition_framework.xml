@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/master_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<Button
+		android:id="@+id/switch_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="切换"/>
+
+	<FrameLayout
+		android:id="@+id/scene_root"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<include layout="@layout/a_scene"/>
+	</FrameLayout>
+</LinearLayout>

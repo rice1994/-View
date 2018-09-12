@@ -1,3 +1,7 @@
 <resources>
 	<string name="app_name">Mpplication</string>
+	<string name="description_image_1">description</string>
+	<string name="card_back_title">card_back_title</string>
+	<string name="card_back_description">card_back_description</string>
+	<string name="description_zoom_touch_close">description_zoom_touch_close</string>
 </resources>

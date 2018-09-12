@@ -1,18 +1,14 @@
 package com.example.lenovo.mpplication;
 
-import android.animation.TypeEvaluator;
-import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.example.lenovo.mpplication.animation.PropertyActivity;
 import com.example.lenovo.mpplication.animation.tween.TweenActivity;
 
 /**
@@ -38,52 +34,14 @@ public class AnimationsTransitionsActivity extends Activity {
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.valueAnimator:
-				ValueAnimator animator = ValueAnimator.ofFloat(0f, 100f);
-				animator = ValueAnimator.ofObject(new TypeEvaluator() {
-					@Override
-					public Object evaluate(float fraction, Object startValue, Object endValue) {
-						Log.e(TAG, "evaluate: fraction=" + fraction);
-						return fraction * (int) endValue;
-					}
-				}, 0, 200);
-				animator.setDuration(1000);
-				animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-					@Override
-					public void onAnimationUpdate(ValueAnimator animation) {
-						float animatedValue = (float) animation.getAnimatedValue();
-						Log.e(TAG, "onAnimationUpdate: animatedValue=" + animatedValue);
-						mBtn.setTranslationX(animatedValue);
-						if (animatedValue == 200) {
-							LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mBtn.getLayoutParams();
-							if (params != null) {
-								String s = "leftMargin = " + params.leftMargin + " rightMargin = " + params.rightMargin
-										+ " getLeft = " + mBtn.getLeft() + " getRight = " + mBtn.getRight() + " getWidth = " + mBtn.getWidth();
-								Log.i(TAG, s);
-							}
-							int[] pos = new int[2];
-							//以父控件为原点的mBtn坐标
-							mBtn.getLocationOnScreen(pos);
-							//以屏幕为原点的mBtn坐标
-							int[] pos1 = new int[2];
-							mBtn.getLocationInWindow(pos1);
-							Rect rect = new Rect();
-							Rect rect1 = new Rect();
-							//mBtn宽高
-							mBtn.getLocalVisibleRect(rect);
-							//mBtn在屏幕中偏移量
-							mBtn.getGlobalVisibleRect(rect1);
-							mBtn.getGlobalVisibleRect(rect1);
-						}
-					}
-				});
-				animator.start();
+
 				break;
 			case R.id.tween:
 				startActivity(new Intent(this, TweenActivity.class));
 
 				break;
 			case R.id.property:
-				startActivity(new Intent(this, CustomViewActivity.class));
+				startActivity(new Intent(this, PropertyActivity.class));
 
 				break;
 		}

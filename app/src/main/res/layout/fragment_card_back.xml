@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="16dp"
+	android:gravity="bottom">
+	<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:src="@mipmap/ic_launcher"
+		android:scaleType="centerCrop"
+		android:contentDescription="@string/description_image_1" />
+</FrameLayout>

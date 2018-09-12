@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".animation.PropertyActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:textAllCaps="false">
+
+		<Button
+			android:id="@+id/valueAnimator"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="ValueAnimator"
+			android:textAllCaps="false"/>
+
+		<Button
+			android:id="@+id/ObjectAnimator"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="ObjectAnimator"
+			android:textAllCaps="false"/>
+
+		<Button
+			android:id="@+id/AnimatorSet"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="AnimatorSet"
+			android:textAllCaps="false"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/Specify_keyframes"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="Specify keyframes"
+			android:textAllCaps="false"/>
+
+		<Button
+			android:id="@+id/ViewPropertyAnimator"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="ViewPropertyAnimator"
+			android:textAllCaps="false"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/animations_in_XML"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="animations in XML"
+			android:textAllCaps="false"/>
+
+		<Button
+			android:id="@+id/move_view"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="Move a View with Animation"
+			android:textAllCaps="false"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/fling_animation"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="fling_animation"
+			android:textAllCaps="false"/>
+
+		<Button
+			android:id="@+id/zoom_animation"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="zoom animation"
+			android:textAllCaps="false"/>
+
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/SpringAnimation"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="SpringAnimation"
+			android:textAllCaps="false"/>
+
+		<Button
+			android:id="@+id/animateLayoutChanges"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="animateLayoutChanges"
+			android:textAllCaps="false"/>
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/transition_framework"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Transition Framework"
+		android:textAllCaps="false"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center_vertical"
+			android:text="静态矢量图 VectorDrawable: "/>
+
+		<ImageView
+			android:id="@+id/VectorDrawable"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="animations in XML"
+			android:textAllCaps="false"
+			app:srcCompat="@drawable/ic_add_black_24dp"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center_vertical"
+			android:text="动态矢量图 AnimatedVectorDrawable: "/>
+
+		<ImageView
+			android:id="@+id/AnimatedVectorDrawable"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:text="animations in XML"
+			android:textAllCaps="false"
+			app:srcCompat="@drawable/ic_add_animated_vector"/>
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/stateListAnimator"
+		android:layout_width="wrap_content"
+		android:layout_height="40dp"
+		android:layout_marginLeft="100dp"
+		android:background="@color/colorPrimary"
+		android:text="stateListAnimator(长按试试)"
+		android:textAllCaps="false"/>
+
+	<!--
+	<Button
+		android:id="@+id/stateListAnimator"
+		android:layout_width="wrap_content"
+		android:layout_height="40dp"
+		android:layout_marginLeft="100dp"
+		android:background="@color/colorPrimary"
+		android:stateListAnimator="@drawable/animate_scale"
+		android:text="stateListAnimator"/>-->
+
+	<Button
+		android:id="@+id/AnimationView"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_marginLeft="100dp"
+		android:layout_marginTop="10dp"
+		android:background="@color/colorAccent"
+		android:text="动画"
+		android:textAllCaps="false"/>
+</LinearLayout>

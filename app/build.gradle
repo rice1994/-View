@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
+	defaultConfig {
+		vectorDrawables.useSupportLibrary = true
+	}
+
 	compileSdkVersion 27
 	buildToolsVersion '27.0.3'
 	defaultConfig {
@@ -33,4 +37,7 @@ dependencies {
 	implementation 'com.squareup.retrofit2:retrofit:+'
 	implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
 	implementation 'com.squareup.retrofit2:adapter-rxjava:+'
+	implementation 'com.android.support:support-dynamic-animation:27.1.1'
+	implementation 'com.android.support:recyclerview-v7:26.1.0'
+
 }
