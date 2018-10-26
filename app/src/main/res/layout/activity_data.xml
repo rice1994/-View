@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".data.DataActivity">
+
+	<Button
+		android:id="@+id/internal_no_cache"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="内部持续化存储"/>
+
+	<Button
+		android:id="@+id/internal_cache"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="内部缓存"/>
+
+	<Button
+		android:id="@+id/load"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="下载"/>
+
+	<Button
+		android:id="@+id/public_files_save"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="外部公共存储"/>
+
+	<Button
+		android:id="@+id/private_files_save"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="外部私有存储"/>
+
+	<Button
+		android:id="@+id/read_file"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="读取外部存储"/>
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.lenovo.mpplication.animation;
+package com.example.lenovo.mpplication.animation.propoty;
 
 import android.animation.*;
 import android.content.Intent;
@@ -20,6 +20,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.example.lenovo.mpplication.R;
+import com.example.lenovo.mpplication.animation.AnimateLayoutChangesActivity;
+import com.example.lenovo.mpplication.animation.TransitionFrameworkActivity;
 import com.example.lenovo.mpplication.animation.tween.ZoomActivity;
 
 /**
@@ -245,5 +247,30 @@ public class PropertyActivity extends AppCompatActivity {
 				startActivity(new Intent(this, TransitionFrameworkActivity.class));
 				break;
 		}
+	}
+
+	private void ss() {
+		//设置动画的自定义类型，类型估值器
+		// fraction：0~1，startValue=0，endValue=100
+		// fraction：0~1，startValue=100，endValue=200
+		ValueAnimator animator = ValueAnimator.ofObject(new TypeEvaluator() {
+			@Override
+			public Object evaluate(float fraction, Object startValue, Object endValue) {
+				return fraction * (int) endValue;
+			}
+		}, 0, 100, 200);
+		animator.setDuration(1000);
+		//每次更新属性值时就会调用onAnimationUpdate函数，在这里可以获得新的属性值
+		//十分灵活，只操作属性值，可以运用于任何对象之上
+		animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+			@Override
+			public void onAnimationUpdate(ValueAnimator animation) {
+				float animatedValue = (float) animation.getAnimatedValue();
+				Log.e(TAG, "onAnimationUpdate: animatedValue=" + animatedValue);
+				mAnimationView.setTranslationX(animatedValue);
+
+			}
+		});
+		animator.start();
 	}
 }

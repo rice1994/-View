@@ -6,6 +6,7 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical"
 	tools:context="com.example.lenovo.mpplication.MainActivity">
+
 	<Button
 		android:id="@+id/custom_view"
 		android:layout_width="wrap_content"
@@ -26,5 +27,33 @@
 		android:layout_height="wrap_content"
 		android:gravity="center"
 		android:text="资源类型"/>
+
+	<Button
+		android:id="@+id/event"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="事件分发"/>
+
+	<Button
+		android:id="@+id/data"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="文件存储"/>
+
+	<Button
+		android:id="@+id/activity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="activity"/>
+
+	<Button
+		android:id="@+id/intent"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="intent"/>
 
 </LinearLayout>

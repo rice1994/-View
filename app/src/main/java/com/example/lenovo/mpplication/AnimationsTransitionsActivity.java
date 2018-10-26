@@ -8,7 +8,8 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.example.lenovo.mpplication.animation.PropertyActivity;
+import com.example.lenovo.mpplication.animation.propoty.HighPropertyActivity;
+import com.example.lenovo.mpplication.animation.propoty.PropertyActivity;
 import com.example.lenovo.mpplication.animation.tween.TweenActivity;
 
 /**
@@ -30,19 +31,19 @@ public class AnimationsTransitionsActivity extends Activity {
 		ButterKnife.bind(this);
 	}
 
-	@OnClick({R.id.valueAnimator,R.id.tween ,R.id.property})
+	@OnClick({R.id.valueAnimator,R.id.tween ,R.id.property,R.id.property_high})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.valueAnimator:
-
 				break;
 			case R.id.tween:
 				startActivity(new Intent(this, TweenActivity.class));
-
 				break;
 			case R.id.property:
 				startActivity(new Intent(this, PropertyActivity.class));
-
+				break;
+			case R.id.property_high:
+				startActivity(new Intent(this, HighPropertyActivity.class));
 				break;
 		}
 	}

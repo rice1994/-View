@@ -28,6 +28,5 @@
 	android:fromYScale="0.0"
 	android:toYScale="2"
 	android:pivotX="50%"
-	android:pivotY="50%"
-	/>
+	android:pivotY="50%"/>
 

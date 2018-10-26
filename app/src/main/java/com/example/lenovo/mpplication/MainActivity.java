@@ -6,7 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.example.lenovo.mpplication.activity.AActivity;
+import com.example.lenovo.mpplication.data.DataActivity;
 import com.example.lenovo.mpplication.drag.DrayAndDropActivity;
+import com.example.lenovo.mpplication.event.EventActivity;
+import com.example.lenovo.mpplication.intent.IntentActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
 		ButterKnife.bind(this);
 	}
 
-	@OnClick({R.id.custom_view, R.id.animations_transitions, R.id.resource_types})
+	@OnClick({R.id.custom_view, R.id.animations_transitions,
+			R.id.resource_types, R.id.event, R.id.activity, R.id.intent, R.id.data})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.custom_view:
@@ -49,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
 				startActivity(new Intent(this, DrayAndDropActivity.class));
 //				FireMissilesDialogFragment fireMissilesDialogFragment = new FireMissilesDialogFragment();
 //				fireMissilesDialogFragment.showNow(getSupportFragmentManager(),"ss");
+				break;
+			case R.id.event:
+				startActivity(new Intent(this, EventActivity.class));
+				break;
+			case R.id.data:
+				startActivity(new Intent(this, DataActivity.class));
+				break;	case R.id.activity:
+				startActivity(new Intent(this, AActivity.class));
+				break;
+			case R.id.intent:
+				startActivity(new Intent(this, IntentActivity.class));
 				break;
 		}
 	}
