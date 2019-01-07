@@ -12,10 +12,6 @@ import com.example.library.Global;
 
 import java.io.*;
 
-/**
- * Created by HenryZhang on 2017/4/14.<br>
- * Copyright © 2017 www.yylending.com. All Rights Reserved.<br><br>
- */
 public class BitmapOptimizer {
 	private static final String TAG = BitmapOptimizer.class.getSimpleName();
 

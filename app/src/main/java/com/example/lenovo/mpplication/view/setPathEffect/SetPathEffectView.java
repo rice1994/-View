@@ -8,7 +8,6 @@ import com.example.lenovo.mpplication.view.base.BaseView;
 
 /**
  * Created by fan on 2018/5/22.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class SetPathEffectView extends BaseView {
 	public final static int basic_operation_of_Path = 1;

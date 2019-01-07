@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 
 /**
  * Created by fan on 2018/9/25.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class MyLinearLayout extends LinearLayout {
 	private static final String TAG = MyLinearLayout.class.getSimpleName();

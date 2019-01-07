@@ -7,7 +7,6 @@ import com.example.lenovo.mpplication.view.base.BaseView;
 
 /**
  * Created by fan on 2018/5/4.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class PathView extends BaseView {
 

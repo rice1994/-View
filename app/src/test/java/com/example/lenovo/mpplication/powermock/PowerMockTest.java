@@ -14,7 +14,6 @@ import org.powermock.reflect.Whitebox;
 
 /**
  * Created by fan on 2018/10/19.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Banana.class})

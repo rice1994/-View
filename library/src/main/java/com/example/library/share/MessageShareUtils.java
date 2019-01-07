@@ -6,7 +6,6 @@ import android.net.Uri;
 
 /**
  * Created by fan on 2018/9/5.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class MessageShareUtils {
 	/**

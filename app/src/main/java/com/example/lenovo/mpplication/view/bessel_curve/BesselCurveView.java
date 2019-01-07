@@ -11,7 +11,6 @@ import com.example.lenovo.mpplication.view.base.BaseView;
 
 /**
  * Created by fan on 2018/5/24.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  * <p>
  * 贝塞尔曲线的运用是十分广泛的，
  * 可以说贝塞尔曲线奠定了计算机绘图的基础(因为它可以将任何复杂的图形用精确的数学语言进行描述

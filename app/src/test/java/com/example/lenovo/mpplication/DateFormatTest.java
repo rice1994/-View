@@ -11,7 +11,6 @@ import java.util.Collection;
 
 /**
  * Created by fan on 2018/10/18.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  *
  * 参数化测试
  */

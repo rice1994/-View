@@ -11,6 +11,8 @@ import com.example.lenovo.mpplication.data.DataActivity;
 import com.example.lenovo.mpplication.drag.DrayAndDropActivity;
 import com.example.lenovo.mpplication.event.EventActivity;
 import com.example.lenovo.mpplication.intent.IntentActivity;
+import com.example.lenovo.mpplication.multithreading.MultithreadingActivity;
+import com.example.lenovo.mpplication.rv.RvActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +25,17 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	@OnClick({R.id.custom_view, R.id.animations_transitions,
-			R.id.resource_types, R.id.event, R.id.activity, R.id.intent, R.id.data})
+			R.id.resource_types, R.id.event, R.id.activity, R.id.intent,
+			R.id.data, R.id.rv_location, R.id.multithreading})
 	public void onClick(View view) {
 		switch (view.getId()) {
 			case R.id.custom_view:
-				startActivity(new Intent(this,CustomViewActivity.class));
+//				startActivity(new Intent(this,CustomViewActivity.class));
+				Intent sendIntent = new Intent();
+				sendIntent.setAction(Intent.ACTION_SEND);
+				sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+				sendIntent.setType("text/plain");
+				startActivity(Intent.createChooser(sendIntent, "getResources().getText(R.string.send_to)"));
 			//	startActivity(new Intent(this,BlurActivity.class));
 				break;
 			case R.id.animations_transitions:
@@ -65,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
 				break;
 			case R.id.intent:
 				startActivity(new Intent(this, IntentActivity.class));
+				break;
+			case R.id.rv_location:
+				startActivity(new Intent(this, RvActivity.class));
+				break;
+			case R.id.multithreading:
+				startActivity(new Intent(this, MultithreadingActivity.class));
 				break;
 		}
 	}

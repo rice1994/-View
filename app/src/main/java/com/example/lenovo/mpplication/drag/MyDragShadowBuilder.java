@@ -9,7 +9,6 @@ import android.view.View;
 
 /**
  * Created by fan on 2018/8/20.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class MyDragShadowBuilder extends View.DragShadowBuilder {
 	private Drawable shadow;

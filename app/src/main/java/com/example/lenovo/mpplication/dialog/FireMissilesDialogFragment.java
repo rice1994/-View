@@ -12,7 +12,6 @@ import com.example.lenovo.mpplication.R;
 
 /**
  * Created by fan on 2018/8/17.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class FireMissilesDialogFragment extends DialogFragment {
 

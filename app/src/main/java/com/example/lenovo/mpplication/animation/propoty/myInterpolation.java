@@ -4,7 +4,6 @@ import android.animation.TimeInterpolator;
 
 /**
  * Created by fan on 2018/9/19.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class myInterpolation implements TimeInterpolator {
 	@Override

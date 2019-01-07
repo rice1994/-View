@@ -9,7 +9,6 @@ import com.example.lenovo.mpplication.R;
 
 /**
  * Created by fan on 2018/6/4.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class SetPolyToPoly extends View {
 	private static final String TAG = "SetPolyToPoly";

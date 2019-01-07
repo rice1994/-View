@@ -15,7 +15,6 @@ import static org.robolectric.shadow.api.Shadow.extract;
 
 /**
  * Created by fan on 2018/10/19.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class,

@@ -10,7 +10,6 @@ import java.util.Set;
 
 /**
  * Created by fan on 2018/4/17.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class HeaderInterceptor implements Interceptor {
 	private Map<String, String> mHeaders;

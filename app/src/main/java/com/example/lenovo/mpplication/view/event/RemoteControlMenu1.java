@@ -9,7 +9,6 @@ import com.example.lenovo.mpplication.view.base.BaseView;
 
 /**
  * Created by fan on 2018/6/7.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class RemoteControlMenu1 extends BaseView {
 	private Region[] regions;

@@ -9,7 +9,6 @@ import static org.junit.Assert.assertThat;
 
 /**
  * Created by fan on 2018/10/18.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  *
  *assertThat用法
  *

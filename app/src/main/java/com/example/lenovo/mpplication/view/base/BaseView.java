@@ -1,6 +1,7 @@
 package com.example.lenovo.mpplication.view.base;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -10,7 +11,6 @@ import android.view.View;
 
 /**
  * Created by fan on 2018/5/4.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class BaseView extends View {
 
@@ -90,4 +90,8 @@ public class BaseView extends View {
 		invalidate();
 	}
 
+	@Override
+	protected void onDraw(Canvas canvas) {
+		super.onDraw(canvas);
+	}
 }

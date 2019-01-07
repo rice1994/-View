@@ -7,7 +7,6 @@ import android.view.View;
 
 /**
  * Created by fan on 2018/5/25.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class Bezier3 extends View {
 	private static final float C = 0.551915024494f;     // 一个常量，用来计算绘制圆形贝塞尔曲线控制点的位置

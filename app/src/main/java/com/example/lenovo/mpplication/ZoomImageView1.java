@@ -13,7 +13,6 @@ import android.view.*;
 
 /**
  * Created by fan on 2018/7/6.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class ZoomImageView1 extends AppCompatImageView implements
 		ViewTreeObserver.OnGlobalLayoutListener, View.OnTouchListener, ScaleGestureDetector.OnScaleGestureListener {

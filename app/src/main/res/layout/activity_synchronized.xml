@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".multithreading.Synchronized.SynchronizedActivity">
+
+	<Button
+		android:id="@+id/btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="synchronized基本用法"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="实例锁和全局锁：\n
+		pulbic class Something {\n
+    	public synchronized void isSyncA(){}\n
+    	public synchronized void isSyncB(){}\n
+    	public static synchronized void cSyncA(){}\n
+    	public static synchronized void cSyncB(){}\n
+}"/>
+
+	<Button
+		android:id="@+id/btn1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="x.isSyncA()与x.isSyncB()----不能被同时访问"/>
+
+	<Button
+		android:id="@+id/btn2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="x.isSyncA()与y.isSyncA()---同时访问"/>
+
+	<Button
+		android:id="@+id/btn3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="x.cSyncA()与y.cSyncB())----不能被同时访问"/>
+
+	<Button
+		android:id="@+id/btn4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="x.isSyncA()与Something.cSyncA()----同时访问"/>
+</LinearLayout>

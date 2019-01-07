@@ -8,7 +8,6 @@ import android.view.animation.Transformation;
 
 /**
  * Created by fan on 2018/6/5.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class Rotate3dAnimation extends Animation {
 	private final float mFromDegrees;

@@ -21,7 +21,6 @@ import rx.schedulers.Schedulers;
 
 /**
  * Created by fan on 2018/4/17.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class okHttpClient<T> {
 	private static final String TAG = okHttpClient.class.getSimpleName();

@@ -9,7 +9,6 @@ import java.io.FileInputStream;
 import java.text.DecimalFormat;
 
 /**
- * Title: FileSizeUtils Description: Company: YYLending(YouJingPuHui)
  *
  * @author XiongYuFeng
  *         date 2016年6月13日 下午4:36:17

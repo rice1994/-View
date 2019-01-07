@@ -10,7 +10,6 @@ import com.example.lenovo.mpplication.view.base.BaseView;
 
 /**
  * Created by fan on 2018/5/28.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  * <p>
  * /**
  * Path & PathMeasure

@@ -27,7 +27,6 @@ import org.robolectric.shadows.ShadowToast;
 
 /**
  * Created by fan on 2018/10/19.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  *
  * Robolectric定义了大量模拟Android系统类行为的Shadow类
  *

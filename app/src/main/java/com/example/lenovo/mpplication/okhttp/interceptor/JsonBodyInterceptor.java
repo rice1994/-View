@@ -8,7 +8,6 @@ import java.io.IOException;
 
 /**
  * Created by fan on 2018/4/17.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class JsonBodyInterceptor implements Interceptor {
 	private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");

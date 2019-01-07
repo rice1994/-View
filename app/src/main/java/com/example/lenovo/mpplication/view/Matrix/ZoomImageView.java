@@ -10,7 +10,6 @@ import android.view.*;
 
 /**
  * Created by fan on 2018/5/29.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class ZoomImageView extends android.support.v7.widget.AppCompatImageView implements ViewTreeObserver.OnGlobalLayoutListener, ScaleGestureDetector.OnScaleGestureListener, View.OnTouchListener {
 	private static final String TAG = "ZoomImageView";

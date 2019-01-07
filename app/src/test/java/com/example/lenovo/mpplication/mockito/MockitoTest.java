@@ -19,7 +19,6 @@ import static org.mockito.Mockito.*;
 
 /**
  * Created by fan on 2018/10/18.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 @Suite.SuiteClasses({DateUtilTest.class, DateFormatTest.class})
 public class MockitoTest {

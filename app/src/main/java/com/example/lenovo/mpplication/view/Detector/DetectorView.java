@@ -11,7 +11,6 @@ import com.example.lenovo.mpplication.view.base.BaseView;
 
 /**
  * Created by fan on 2018/6/7.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class DetectorView extends BaseView{
 	private static final String TAG = DetectorView.class.getSimpleName();

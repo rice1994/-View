@@ -8,7 +8,6 @@ import android.widget.Button;
 
 /**
  * Created by fan on 2018/9/25.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class MyButton extends android.support.v7.widget.AppCompatButton {
 	private static final String TAG = MyButton.class.getSimpleName();

@@ -5,7 +5,6 @@ import android.graphics.Point;
 
 /**
  * Created by fan on 2018/9/19.
- * Copyright  2018 www.yylending.com. All Rights Reserved.
  */
 public class PointEvaluator implements TypeEvaluator {
 

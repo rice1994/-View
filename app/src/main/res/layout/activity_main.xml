@@ -56,4 +56,18 @@
 		android:gravity="center"
 		android:text="intent"/>
 
+	<Button
+		android:id="@+id/rv_location"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="RecyclerView滚动定位"/>
+
+	<Button
+		android:id="@+id/multithreading"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="多线程"/>
+
 </LinearLayout>
