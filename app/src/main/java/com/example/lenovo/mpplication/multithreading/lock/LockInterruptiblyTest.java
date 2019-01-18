@@ -1,6 +1,7 @@
 package com.example.lenovo.mpplication.multithreading.lock;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -42,6 +43,10 @@ public class LockInterruptiblyTest {
 
 			}
 		}.start();
+
+		LinkedList<Object> objects = new LinkedList<>();
+		objects.removeFirst();
+		objects.pollFirst();
 	}
 
 	public void insert(Thread thread) {
